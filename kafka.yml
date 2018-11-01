@@ -16,6 +16,8 @@
       with_items:
         - { src: "zookeeper.yml", dest: "/home/ccma/zookeeper.yml" }
         - { src: "zookeeper-service.yml", dest: "/home/ccma/zookeeper-service.yml" }
+        - { src: "kafka-service.yml", dest: "/home/ccma/kafka-service.yml" }
+        - { src: "kafka-cluster.yml", dest: "/home/ccma/kafka-cluster.yml" }
 
     - name: Run kubectl create --filename zookeeper.yml
       become: yes
@@ -24,9 +26,39 @@
         KUBECONFIG: /home/ccma/.kube/config
       register: create_zookeeper
 
+    - name: Debug create_zookeeper
+      debug: 
+        var: create_zookeeper
+
     - name: Run kubectl create --filename zookeeper-service.yml
       become: yes
       shell: "kubectl create --filename zookeeper-service.yml"
       environment:
         KUBECONFIG: /home/ccma/.kube/config
       register: create_zookeeper_service
+
+    - name: Debug create_zookeeper_service
+      debug: 
+        var: create_zookeeper_service
+
+    - name: Run kubectl create --filename kafka-service.yml
+      become: yes
+      shell: "kubectl create --filename kafka-service.yml"
+      environment:
+        KUBECONFIG: /home/ccma/.kube/config
+      register: create_kafka_service
+
+    - name: Debug create_kafka_service
+      debug: 
+        var: create_kafka_service
+
+    - name: Run kubectl create --filename kafka-cluster.yml
+      become: yes
+      shell: "kubectl create --filename kafka-cluster.yml"
+      environment:
+        KUBECONFIG: /home/ccma/.kube/config
+      register: create_kafka_cluster
+
+    - name: Debug create_kafka_cluster
+      debug: 
+        var: create_kafka_cluster

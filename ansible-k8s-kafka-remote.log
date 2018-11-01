@@ -8,3 +8,160 @@
 2018-12-04 14:25:18,568 p=14077 u=yungshun |  changed: [10.236.1.1]
 2018-12-04 14:25:18,570 p=14077 u=yungshun |  PLAY RECAP *********************************************************************
 2018-12-04 14:25:18,570 p=14077 u=yungshun |  10.236.1.1                 : ok=3    changed=3    unreachable=0    failed=0   
+2018-12-04 14:54:26,733 p=14322 u=yungshun |  PLAY [kafka] *******************************************************************
+2018-12-04 14:54:26,753 p=14322 u=yungshun |  TASK [Copy zookeeper.yml to k8s master] ****************************************
+2018-12-04 14:54:29,021 p=14322 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper.yml', u'src': u'zookeeper.yml'})
+2018-12-04 14:54:29,603 p=14322 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper-service.yml', u'src': u'zookeeper-service.yml'})
+2018-12-04 14:54:30,384 p=14322 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/kafka-service.yml', u'src': u'kafka-service.yml'})
+2018-12-04 14:54:31,064 p=14322 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/kafka-cluster.yml', u'src': u'kafka-cluster.yml'})
+2018-12-04 14:54:31,070 p=14322 u=yungshun |  TASK [Run kubectl create --filename zookeeper.yml] *****************************
+2018-12-04 14:54:34,483 p=14322 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:54:34,508 p=14322 u=yungshun |  TASK [Debug create_zookeeper] **************************************************
+2018-12-04 14:54:34,604 p=14322 u=yungshun |  ok: [10.236.1.1] => {
+    "create_zookeeper": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper.yml", 
+        "delta": "0:00:02.838380", 
+        "end": "2018-12-04 14:54:34.424052", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-04 14:54:31.585672", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/zookeeper-deployment-1 created\ndeployment.extensions/zookeeper-deployment-2 created", 
+        "stdout_lines": [
+            "deployment.extensions/zookeeper-deployment-1 created", 
+            "deployment.extensions/zookeeper-deployment-2 created"
+        ]
+    }
+}
+2018-12-04 14:54:34,610 p=14322 u=yungshun |  TASK [Run kubectl create --filename zookeeper-service.yml] *********************
+2018-12-04 14:54:35,528 p=14322 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:54:35,532 p=14322 u=yungshun |  TASK [Debug create_zookeeper_service] ******************************************
+2018-12-04 14:54:35,638 p=14322 u=yungshun |  ok: [10.236.1.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-service.yml", 
+        "delta": "0:00:00.462009", 
+        "end": "2018-12-04 14:54:35.466356", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-04 14:54:35.004347", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zoo1 created\nservice/zoo2 created", 
+        "stdout_lines": [
+            "service/zoo1 created", 
+            "service/zoo2 created"
+        ]
+    }
+}
+2018-12-04 14:54:35,645 p=14322 u=yungshun |  TASK [Run kubectl create --filename kafka-service.yml] *************************
+2018-12-04 14:54:36,453 p=14322 u=yungshun |  fatal: [10.236.1.1]: FAILED! => {"changed": true, "cmd": "kubectl create --filename kafka-service.yml", "delta": "0:00:00.355821", "end": "2018-12-04 14:54:36.393057", "msg": "non-zero return code", "rc": 1, "start": "2018-12-04 14:54:36.037236", "stderr": "error: error parsing kafka-service.yml: error converting YAML to JSON: yaml: line 12: did not find expected '-' indicator", "stderr_lines": ["error: error parsing kafka-service.yml: error converting YAML to JSON: yaml: line 12: did not find expected '-' indicator"], "stdout": "", "stdout_lines": []}
+2018-12-04 14:54:36,455 p=14322 u=yungshun |  	to retry, use: --limit @/home/yungshun/workspace/ansible/ansible-k8s-kafka-remote/kafka.retry
+
+2018-12-04 14:54:36,455 p=14322 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-04 14:54:36,455 p=14322 u=yungshun |  10.236.1.1                 : ok=5    changed=3    unreachable=0    failed=1   
+2018-12-04 14:55:23,388 p=14493 u=yungshun |  PLAY [kafka] *******************************************************************
+2018-12-04 14:55:23,399 p=14493 u=yungshun |  TASK [Copy zookeeper.yml to k8s master] ****************************************
+2018-12-04 14:55:24,306 p=14493 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper.yml', u'src': u'zookeeper.yml'})
+2018-12-04 14:55:24,886 p=14493 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper-service.yml', u'src': u'zookeeper-service.yml'})
+2018-12-04 14:55:25,686 p=14493 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/kafka-service.yml', u'src': u'kafka-service.yml'})
+2018-12-04 14:55:26,279 p=14493 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/kafka-cluster.yml', u'src': u'kafka-cluster.yml'})
+2018-12-04 14:55:26,285 p=14493 u=yungshun |  TASK [Run kubectl create --filename zookeeper.yml] *****************************
+2018-12-04 14:55:27,220 p=14493 u=yungshun |  fatal: [10.236.1.1]: FAILED! => {"changed": true, "cmd": "kubectl create --filename zookeeper.yml", "delta": "0:00:00.386508", "end": "2018-12-04 14:55:27.162595", "msg": "non-zero return code", "rc": 1, "start": "2018-12-04 14:55:26.776087", "stderr": "Error from server (AlreadyExists): error when creating \"zookeeper.yml\": deployments.extensions \"zookeeper-deployment-1\" already exists\nError from server (AlreadyExists): error when creating \"zookeeper.yml\": deployments.extensions \"zookeeper-deployment-2\" already exists", "stderr_lines": ["Error from server (AlreadyExists): error when creating \"zookeeper.yml\": deployments.extensions \"zookeeper-deployment-1\" already exists", "Error from server (AlreadyExists): error when creating \"zookeeper.yml\": deployments.extensions \"zookeeper-deployment-2\" already exists"], "stdout": "", "stdout_lines": []}
+2018-12-04 14:55:27,222 p=14493 u=yungshun |  	to retry, use: --limit @/home/yungshun/workspace/ansible/ansible-k8s-kafka-remote/kafka.retry
+
+2018-12-04 14:55:27,223 p=14493 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-04 14:55:27,223 p=14493 u=yungshun |  10.236.1.1                 : ok=1    changed=1    unreachable=0    failed=1   
+2018-12-04 14:56:30,699 p=14607 u=yungshun |  PLAY [kafka] *******************************************************************
+2018-12-04 14:56:30,709 p=14607 u=yungshun |  TASK [Copy zookeeper.yml to k8s master] ****************************************
+2018-12-04 14:56:32,905 p=14607 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper.yml', u'src': u'zookeeper.yml'})
+2018-12-04 14:56:33,494 p=14607 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper-service.yml', u'src': u'zookeeper-service.yml'})
+2018-12-04 14:56:34,094 p=14607 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/kafka-service.yml', u'src': u'kafka-service.yml'})
+2018-12-04 14:56:35,003 p=14607 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/kafka-cluster.yml', u'src': u'kafka-cluster.yml'})
+2018-12-04 14:56:35,010 p=14607 u=yungshun |  TASK [Run kubectl create --filename zookeeper.yml] *****************************
+2018-12-04 14:56:35,955 p=14607 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:56:35,959 p=14607 u=yungshun |  TASK [Debug create_zookeeper] **************************************************
+2018-12-04 14:56:36,039 p=14607 u=yungshun |  ok: [10.236.1.1] => {
+    "create_zookeeper": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper.yml", 
+        "delta": "0:00:00.362783", 
+        "end": "2018-12-04 14:56:35.897053", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-04 14:56:35.534270", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/zookeeper-deployment-1 created\ndeployment.extensions/zookeeper-deployment-2 created", 
+        "stdout_lines": [
+            "deployment.extensions/zookeeper-deployment-1 created", 
+            "deployment.extensions/zookeeper-deployment-2 created"
+        ]
+    }
+}
+2018-12-04 14:56:36,045 p=14607 u=yungshun |  TASK [Run kubectl create --filename zookeeper-service.yml] *********************
+2018-12-04 14:56:36,898 p=14607 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:56:36,902 p=14607 u=yungshun |  TASK [Debug create_zookeeper_service] ******************************************
+2018-12-04 14:56:36,981 p=14607 u=yungshun |  ok: [10.236.1.1] => {
+    "create_zookeeper_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename zookeeper-service.yml", 
+        "delta": "0:00:00.425991", 
+        "end": "2018-12-04 14:56:36.841575", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-04 14:56:36.415584", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/zoo1 created\nservice/zoo2 created", 
+        "stdout_lines": [
+            "service/zoo1 created", 
+            "service/zoo2 created"
+        ]
+    }
+}
+2018-12-04 14:56:36,987 p=14607 u=yungshun |  TASK [Run kubectl create --filename kafka-service.yml] *************************
+2018-12-04 14:56:37,817 p=14607 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:56:37,823 p=14607 u=yungshun |  TASK [Debug create_kafka_service] **********************************************
+2018-12-04 14:56:37,904 p=14607 u=yungshun |  ok: [10.236.1.1] => {
+    "create_kafka_service": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-service.yml", 
+        "delta": "0:00:00.403142", 
+        "end": "2018-12-04 14:56:37.758491", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-04 14:56:37.355349", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/kafka-service created", 
+        "stdout_lines": [
+            "service/kafka-service created"
+        ]
+    }
+}
+2018-12-04 14:56:37,908 p=14607 u=yungshun |  TASK [Run kubectl create --filename kafka-cluster.yml] *************************
+2018-12-04 14:56:38,742 p=14607 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:56:38,748 p=14607 u=yungshun |  TASK [Debug create_kafka_cluster] **********************************************
+2018-12-04 14:56:38,852 p=14607 u=yungshun |  ok: [10.236.1.1] => {
+    "create_kafka_cluster": {
+        "changed": true, 
+        "cmd": "kubectl create --filename kafka-cluster.yml", 
+        "delta": "0:00:00.404697", 
+        "end": "2018-12-04 14:56:38.686049", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-04 14:56:38.281352", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/kafka-broker1 created\ndeployment.extensions/kafka-broker2 created", 
+        "stdout_lines": [
+            "deployment.extensions/kafka-broker1 created", 
+            "deployment.extensions/kafka-broker2 created"
+        ]
+    }
+}
+2018-12-04 14:56:38,854 p=14607 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-04 14:56:38,854 p=14607 u=yungshun |  10.236.1.1                 : ok=9    changed=4    unreachable=0    failed=0   
