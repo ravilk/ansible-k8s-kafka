@@ -18,6 +18,7 @@
         - { src: "zookeeper-service.yml", dest: "/home/ccma/zookeeper-service.yml" }
         - { src: "kafka-service.yml", dest: "/home/ccma/kafka-service.yml" }
         - { src: "kafka-cluster.yml", dest: "/home/ccma/kafka-cluster.yml" }
+        - { src: "400-pod-test.yml", dest: "/home/ccma/400-pod-test.yml" }
 
     - name: Run kubectl create --filename zookeeper.yml
       become: yes
@@ -62,3 +63,14 @@
     - name: Debug create_kafka_cluster
       debug: 
         var: create_kafka_cluster
+
+    - name: Run kubectl create --filename 400-pod-test.yml
+      become: yes
+      shell: "kubectl create --filename 400-pod-test.yml"
+      environment:
+        KUBECONFIG: /home/ccma/.kube/config
+      register: create_test_pod
+    
+    - name: Debug create_test_pod
+      debug: 
+        var: create_test_pod
