@@ -1,0 +1,32 @@
+---
+- name: kafka
+  hosts: master
+  gather_facts: no
+ 
+  vars:
+    ansible_become_pass: "ccma"
+
+  tasks:
+    - name: Copy zookeeper.yml to k8s master
+      copy: 
+        src: "{{ item.src }}"
+        dest: "{{ item.dest }}"
+        owner: ccma
+        group: ccma
+      with_items:
+        - { src: "zookeeper.yml", dest: "/home/ccma/zookeeper.yml" }
+        - { src: "zookeeper-service.yml", dest: "/home/ccma/zookeeper-service.yml" }
+
+    - name: Run kubectl create --filename zookeeper.yml
+      become: yes
+      shell: "kubectl create --filename zookeeper.yml"
+      environment:
+        KUBECONFIG: /home/ccma/.kube/config
+      register: create_zookeeper
+
+    - name: Run kubectl create --filename zookeeper-service.yml
+      become: yes
+      shell: "kubectl create --filename zookeeper-service.yml"
+      environment:
+        KUBECONFIG: /home/ccma/.kube/config
+      register: create_zookeeper_service

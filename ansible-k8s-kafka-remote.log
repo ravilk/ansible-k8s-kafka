@@ -1,0 +1,10 @@
+2018-12-04 14:25:11,370 p=14077 u=yungshun |  PLAY [kafka] *******************************************************************
+2018-12-04 14:25:11,413 p=14077 u=yungshun |  TASK [Copy zookeeper.yml to k8s master] ****************************************
+2018-12-04 14:25:13,815 p=14077 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper.yml', u'src': u'zookeeper.yml'})
+2018-12-04 14:25:14,485 p=14077 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/zookeeper-service.yml', u'src': u'zookeeper-service.yml'})
+2018-12-04 14:25:14,513 p=14077 u=yungshun |  TASK [Run kubectl create --filename zookeeper.yml] *****************************
+2018-12-04 14:25:17,593 p=14077 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:25:17,598 p=14077 u=yungshun |  TASK [Run kubectl create --filename zookeeper-service.yml] *********************
+2018-12-04 14:25:18,568 p=14077 u=yungshun |  changed: [10.236.1.1]
+2018-12-04 14:25:18,570 p=14077 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-04 14:25:18,570 p=14077 u=yungshun |  10.236.1.1                 : ok=3    changed=3    unreachable=0    failed=0   
