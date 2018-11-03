@@ -7,7 +7,7 @@
     ansible_become_pass: "ccma"
 
   tasks:
-    - name: Copy zookeeper.yml to k8s master
+    - name: Copy .yml files to k8s master
       copy: 
         src: "{{ item.src }}"
         dest: "{{ item.dest }}"
@@ -18,7 +18,7 @@
         - { src: "zookeeper-service.yml", dest: "/home/ccma/zookeeper-service.yml" }
         - { src: "kafka-service.yml", dest: "/home/ccma/kafka-service.yml" }
         - { src: "kafka-cluster.yml", dest: "/home/ccma/kafka-cluster.yml" }
-        - { src: "400-pod-test.yml", dest: "/home/ccma/400-pod-test.yml" }
+        - { src: "pod-test.yml", dest: "/home/ccma/pod-test.yml" }
 
     - name: Run kubectl create --filename zookeeper.yml
       become: yes
@@ -64,9 +64,9 @@
       debug: 
         var: create_kafka_cluster
 
-    - name: Run kubectl create --filename 400-pod-test.yml
+    - name: Run kubectl create --filename pod-test.yml
       become: yes
-      shell: "kubectl create --filename 400-pod-test.yml"
+      shell: "kubectl create --filename pod-test.yml"
       environment:
         KUBECONFIG: /home/ccma/.kube/config
       register: create_test_pod
