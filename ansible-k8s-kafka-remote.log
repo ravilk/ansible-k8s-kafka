@@ -1195,3 +1195,1352 @@
 }
 2018-12-05 15:22:29,918 p=25476 u=yungshun |  PLAY RECAP *********************************************************************
 2018-12-05 15:22:29,918 p=25476 u=yungshun |  10.236.1.1                 : ok=11   changed=5    unreachable=0    failed=0   
+2018-12-05 16:01:38,166 p=26248 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 16:01:38,176 p=26248 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 16:02:01,668 p=26248 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 16:02:01,696 p=26248 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 16:02:01,907 p=26248 u=yungshun |  fatal: [10.236.1.1]: FAILED! => {"changed": false, "msg": "Could not find or access '/home/ccma/spark-2.3.1-bin-hadoop2.7.tgz' on the Ansible Controller.\nIf you are using a module and expect the file to exist on the remote, see the remote_src option"}
+2018-12-05 16:02:01,909 p=26248 u=yungshun |  	to retry, use: --limit @/home/yungshun/workspace/ansible/ansible-k8s-spark-remote/k8s-spark.retry
+
+2018-12-05 16:02:01,909 p=26248 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 16:02:01,909 p=26248 u=yungshun |  10.236.1.1                 : ok=1    changed=1    unreachable=0    failed=1   
+2018-12-05 16:04:11,547 p=26343 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 16:04:11,557 p=26343 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 16:04:13,492 p=26343 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:04:13,497 p=26343 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 16:04:23,841 p=26343 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:04:23,845 p=26343 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 16:04:24,407 p=26343 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:04:24,414 p=26343 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 16:04:25,002 p=26343 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:04:25,007 p=26343 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 16:04:25,095 p=26343 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 16:04:25,104 p=26343 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 16:04:25,530 p=26343 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:04:25,535 p=26343 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 16:04:25,618 p=26343 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 16:04:25,622 p=26343 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 16:04:26,087 p=26343 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 16:04:26,089 p=26343 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 16:04:26,089 p=26343 u=yungshun |  10.236.1.1                 : ok=8    changed=1    unreachable=0    failed=0   
+2018-12-05 16:30:37,875 p=26652 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 16:30:37,905 p=26652 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 16:31:00,531 p=26652 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 16:31:00,536 p=26652 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 16:31:05,031 p=26652 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:31:05,036 p=26652 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 16:31:05,691 p=26652 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:31:05,696 p=26652 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 16:31:06,426 p=26652 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:31:06,431 p=26652 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 16:31:06,515 p=26652 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 16:31:06,520 p=26652 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 16:31:06,940 p=26652 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 16:31:06,945 p=26652 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 16:31:07,029 p=26652 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 16:31:07,034 p=26652 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 16:31:08,040 p=26652 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 16:31:08,044 p=26652 u=yungshun |  TASK [Build Spark Docker image using docker-image-tool.sh] *********************
+2018-12-05 16:31:10,483 p=26652 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 16:31:10,488 p=26652 u=yungshun |  TASK [Debug build_spark_image] *************************************************
+2018-12-05 16:31:10,582 p=26652 u=yungshun |  ok: [10.236.1.1] => {
+    "build_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r ccma -t latest build", 
+        "delta": "0:00:01.804426", 
+        "end": "2018-12-05 16:31:10.433554", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 16:31:08.629128", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "Sending build context to Docker daemon 256.5 MB\r\r\nStep 1/14 : FROM openjdk:8-alpine\n ---> 97bc1352afde\nStep 2/14 : ARG spark_jars=jars\n ---> Using cache\n ---> 43a88b8f293b\nStep 3/14 : ARG img_path=kubernetes/dockerfiles\n ---> Using cache\n ---> 71820d750cef\nStep 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd\n ---> Using cache\n ---> e21c21b62082\nStep 5/14 : COPY ${spark_jars} /opt/spark/jars\n ---> Using cache\n ---> 08ade418da2a\nStep 6/14 : COPY bin /opt/spark/bin\n ---> Using cache\n ---> 8d0cecbce67d\nStep 7/14 : COPY sbin /opt/spark/sbin\n ---> Using cache\n ---> e91d02214f18\nStep 8/14 : COPY conf /opt/spark/conf\n ---> Using cache\n ---> 4f50cdad51f5\nStep 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/\n ---> Using cache\n ---> fbcf4eaede38\nStep 10/14 : COPY examples /opt/spark/examples\n ---> Using cache\n ---> 371e5dd8f1af\nStep 11/14 : COPY data /opt/spark/data\n ---> Using cache\n ---> b86957cd14c8\nStep 12/14 : ENV SPARK_HOME /opt/spark\n ---> Using cache\n ---> acb3d08effe3\nStep 13/14 : WORKDIR /opt/spark/work-dir\n ---> Using cache\n ---> d310fac48d35\nStep 14/14 : ENTRYPOINT /opt/entrypoint.sh\n ---> Using cache\n ---> 5a3ff9819ba4\nSuccessfully built 5a3ff9819ba4", 
+        "stdout_lines": [
+            "Sending build context to Docker daemon 256.5 MB", 
+            "", 
+            "Step 1/14 : FROM openjdk:8-alpine", 
+            " ---> 97bc1352afde", 
+            "Step 2/14 : ARG spark_jars=jars", 
+            " ---> Using cache", 
+            " ---> 43a88b8f293b", 
+            "Step 3/14 : ARG img_path=kubernetes/dockerfiles", 
+            " ---> Using cache", 
+            " ---> 71820d750cef", 
+            "Step 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd", 
+            " ---> Using cache", 
+            " ---> e21c21b62082", 
+            "Step 5/14 : COPY ${spark_jars} /opt/spark/jars", 
+            " ---> Using cache", 
+            " ---> 08ade418da2a", 
+            "Step 6/14 : COPY bin /opt/spark/bin", 
+            " ---> Using cache", 
+            " ---> 8d0cecbce67d", 
+            "Step 7/14 : COPY sbin /opt/spark/sbin", 
+            " ---> Using cache", 
+            " ---> e91d02214f18", 
+            "Step 8/14 : COPY conf /opt/spark/conf", 
+            " ---> Using cache", 
+            " ---> 4f50cdad51f5", 
+            "Step 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/", 
+            " ---> Using cache", 
+            " ---> fbcf4eaede38", 
+            "Step 10/14 : COPY examples /opt/spark/examples", 
+            " ---> Using cache", 
+            " ---> 371e5dd8f1af", 
+            "Step 11/14 : COPY data /opt/spark/data", 
+            " ---> Using cache", 
+            " ---> b86957cd14c8", 
+            "Step 12/14 : ENV SPARK_HOME /opt/spark", 
+            " ---> Using cache", 
+            " ---> acb3d08effe3", 
+            "Step 13/14 : WORKDIR /opt/spark/work-dir", 
+            " ---> Using cache", 
+            " ---> d310fac48d35", 
+            "Step 14/14 : ENTRYPOINT /opt/entrypoint.sh", 
+            " ---> Using cache", 
+            " ---> 5a3ff9819ba4", 
+            "Successfully built 5a3ff9819ba4"
+        ]
+    }
+}
+2018-12-05 16:31:10,589 p=26652 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 16:31:10,589 p=26652 u=yungshun |  10.236.1.1                 : ok=10   changed=3    unreachable=0    failed=0   
+2018-12-05 17:00:36,989 p=27378 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 17:00:37,000 p=27378 u=yungshun |  TASK [Copy .yml files to k8s master] *******************************************
+2018-12-05 17:00:39,261 p=27378 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/nginx.yml', u'src': u'nginx.yml'})
+2018-12-05 17:00:39,932 p=27378 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master.yml', u'src': u'spark-master.yml'})
+2018-12-05 17:00:40,605 p=27378 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master-service.yml', u'src': u'spark-master-service.yml'})
+2018-12-05 17:00:41,282 p=27378 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-worker.yml', u'src': u'spark-worker.yml'})
+2018-12-05 17:00:41,289 p=27378 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 17:01:02,409 p=27378 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:01:02,414 p=27378 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 17:01:07,242 p=27378 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:01:07,246 p=27378 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 17:01:07,999 p=27378 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:01:08,008 p=27378 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 17:01:08,683 p=27378 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:01:08,689 p=27378 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 17:01:08,770 p=27378 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:01:08,776 p=27378 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 17:01:09,195 p=27378 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:01:09,201 p=27378 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 17:01:09,285 p=27378 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:01:09,294 p=27378 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 17:01:09,749 p=27378 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:01:09,754 p=27378 u=yungshun |  TASK [Build Spark Docker image using docker-image-tool.sh] *********************
+2018-12-05 17:01:12,380 p=27378 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:01:12,386 p=27378 u=yungshun |  TASK [Debug build_spark_image] *************************************************
+2018-12-05 17:01:12,472 p=27378 u=yungshun |  ok: [10.236.1.1] => {
+    "build_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r ccma -t latest build", 
+        "delta": "0:00:01.790498", 
+        "end": "2018-12-05 17:01:12.328850", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:01:10.538352", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "Sending build context to Docker daemon 256.5 MB\r\r\nStep 1/14 : FROM openjdk:8-alpine\n ---> 97bc1352afde\nStep 2/14 : ARG spark_jars=jars\n ---> Using cache\n ---> 43a88b8f293b\nStep 3/14 : ARG img_path=kubernetes/dockerfiles\n ---> Using cache\n ---> 71820d750cef\nStep 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd\n ---> Using cache\n ---> e21c21b62082\nStep 5/14 : COPY ${spark_jars} /opt/spark/jars\n ---> Using cache\n ---> 08ade418da2a\nStep 6/14 : COPY bin /opt/spark/bin\n ---> Using cache\n ---> 8d0cecbce67d\nStep 7/14 : COPY sbin /opt/spark/sbin\n ---> Using cache\n ---> e91d02214f18\nStep 8/14 : COPY conf /opt/spark/conf\n ---> Using cache\n ---> 4f50cdad51f5\nStep 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/\n ---> Using cache\n ---> fbcf4eaede38\nStep 10/14 : COPY examples /opt/spark/examples\n ---> Using cache\n ---> 371e5dd8f1af\nStep 11/14 : COPY data /opt/spark/data\n ---> Using cache\n ---> b86957cd14c8\nStep 12/14 : ENV SPARK_HOME /opt/spark\n ---> Using cache\n ---> acb3d08effe3\nStep 13/14 : WORKDIR /opt/spark/work-dir\n ---> Using cache\n ---> d310fac48d35\nStep 14/14 : ENTRYPOINT /opt/entrypoint.sh\n ---> Using cache\n ---> 5a3ff9819ba4\nSuccessfully built 5a3ff9819ba4", 
+        "stdout_lines": [
+            "Sending build context to Docker daemon 256.5 MB", 
+            "", 
+            "Step 1/14 : FROM openjdk:8-alpine", 
+            " ---> 97bc1352afde", 
+            "Step 2/14 : ARG spark_jars=jars", 
+            " ---> Using cache", 
+            " ---> 43a88b8f293b", 
+            "Step 3/14 : ARG img_path=kubernetes/dockerfiles", 
+            " ---> Using cache", 
+            " ---> 71820d750cef", 
+            "Step 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd", 
+            " ---> Using cache", 
+            " ---> e21c21b62082", 
+            "Step 5/14 : COPY ${spark_jars} /opt/spark/jars", 
+            " ---> Using cache", 
+            " ---> 08ade418da2a", 
+            "Step 6/14 : COPY bin /opt/spark/bin", 
+            " ---> Using cache", 
+            " ---> 8d0cecbce67d", 
+            "Step 7/14 : COPY sbin /opt/spark/sbin", 
+            " ---> Using cache", 
+            " ---> e91d02214f18", 
+            "Step 8/14 : COPY conf /opt/spark/conf", 
+            " ---> Using cache", 
+            " ---> 4f50cdad51f5", 
+            "Step 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/", 
+            " ---> Using cache", 
+            " ---> fbcf4eaede38", 
+            "Step 10/14 : COPY examples /opt/spark/examples", 
+            " ---> Using cache", 
+            " ---> 371e5dd8f1af", 
+            "Step 11/14 : COPY data /opt/spark/data", 
+            " ---> Using cache", 
+            " ---> b86957cd14c8", 
+            "Step 12/14 : ENV SPARK_HOME /opt/spark", 
+            " ---> Using cache", 
+            " ---> acb3d08effe3", 
+            "Step 13/14 : WORKDIR /opt/spark/work-dir", 
+            " ---> Using cache", 
+            " ---> d310fac48d35", 
+            "Step 14/14 : ENTRYPOINT /opt/entrypoint.sh", 
+            " ---> Using cache", 
+            " ---> 5a3ff9819ba4", 
+            "Successfully built 5a3ff9819ba4"
+        ]
+    }
+}
+2018-12-05 17:01:12,478 p=27378 u=yungshun |  TASK [Create an nginx deployment] **********************************************
+2018-12-05 17:01:15,123 p=27378 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:01:15,131 p=27378 u=yungshun |  TASK [Debug create_nginx] ******************************************************
+2018-12-05 17:01:15,227 p=27378 u=yungshun |  ok: [10.236.1.1] => {
+    "create_nginx": {
+        "changed": true, 
+        "cmd": "kubectl create -f nginx.yml", 
+        "delta": "0:00:02.205161", 
+        "end": "2018-12-05 17:01:15.065404", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:01:12.860243", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/nginx-deployment created", 
+        "stdout_lines": [
+            "deployment.extensions/nginx-deployment created"
+        ]
+    }
+}
+2018-12-05 17:01:15,236 p=27378 u=yungshun |  TASK [Create an spark-master deployment] ***************************************
+2018-12-05 17:01:17,840 p=27378 u=yungshun |  fatal: [10.236.1.1]: FAILED! => {"changed": true, "cmd": "kubectl create -f spark-master.yml", "delta": "0:00:02.161990", "end": "2018-12-05 17:01:17.780465", "msg": "non-zero return code", "rc": 1, "start": "2018-12-05 17:01:15.618475", "stderr": "error: unable to recognize \"spark-master.yml\": no matches for kind \"Deployment\" in version \"v1\"", "stderr_lines": ["error: unable to recognize \"spark-master.yml\": no matches for kind \"Deployment\" in version \"v1\""], "stdout": "", "stdout_lines": []}
+2018-12-05 17:01:17,845 p=27378 u=yungshun |  	to retry, use: --limit @/home/yungshun/workspace/ansible/ansible-k8s-spark-remote/k8s-spark.retry
+
+2018-12-05 17:01:17,845 p=27378 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 17:01:17,845 p=27378 u=yungshun |  10.236.1.1                 : ok=13   changed=5    unreachable=0    failed=1   
+2018-12-05 17:01:58,699 p=27682 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 17:01:58,711 p=27682 u=yungshun |  TASK [Copy .yml files to k8s master] *******************************************
+2018-12-05 17:01:59,628 p=27682 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/nginx.yml', u'src': u'nginx.yml'})
+2018-12-05 17:02:00,443 p=27682 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master.yml', u'src': u'spark-master.yml'})
+2018-12-05 17:02:01,051 p=27682 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master-service.yml', u'src': u'spark-master-service.yml'})
+2018-12-05 17:02:01,643 p=27682 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-worker.yml', u'src': u'spark-worker.yml'})
+2018-12-05 17:02:01,650 p=27682 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 17:02:23,254 p=27682 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:02:23,259 p=27682 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 17:02:27,600 p=27682 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:02:27,605 p=27682 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 17:02:28,034 p=27682 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:02:28,038 p=27682 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 17:02:28,616 p=27682 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:02:28,621 p=27682 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 17:02:28,708 p=27682 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:02:28,718 p=27682 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 17:02:29,128 p=27682 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:02:29,133 p=27682 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 17:02:29,217 p=27682 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:02:29,223 p=27682 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 17:02:29,690 p=27682 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:02:29,694 p=27682 u=yungshun |  TASK [Build Spark Docker image using docker-image-tool.sh] *********************
+2018-12-05 17:02:32,097 p=27682 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:02:32,103 p=27682 u=yungshun |  TASK [Debug build_spark_image] *************************************************
+2018-12-05 17:02:32,191 p=27682 u=yungshun |  ok: [10.236.1.1] => {
+    "build_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r ccma -t latest build", 
+        "delta": "0:00:01.838756", 
+        "end": "2018-12-05 17:02:32.044619", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:02:30.205863", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "Sending build context to Docker daemon 256.5 MB\r\r\nStep 1/14 : FROM openjdk:8-alpine\n ---> 97bc1352afde\nStep 2/14 : ARG spark_jars=jars\n ---> Using cache\n ---> 43a88b8f293b\nStep 3/14 : ARG img_path=kubernetes/dockerfiles\n ---> Using cache\n ---> 71820d750cef\nStep 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd\n ---> Using cache\n ---> e21c21b62082\nStep 5/14 : COPY ${spark_jars} /opt/spark/jars\n ---> Using cache\n ---> 08ade418da2a\nStep 6/14 : COPY bin /opt/spark/bin\n ---> Using cache\n ---> 8d0cecbce67d\nStep 7/14 : COPY sbin /opt/spark/sbin\n ---> Using cache\n ---> e91d02214f18\nStep 8/14 : COPY conf /opt/spark/conf\n ---> Using cache\n ---> 4f50cdad51f5\nStep 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/\n ---> Using cache\n ---> fbcf4eaede38\nStep 10/14 : COPY examples /opt/spark/examples\n ---> Using cache\n ---> 371e5dd8f1af\nStep 11/14 : COPY data /opt/spark/data\n ---> Using cache\n ---> b86957cd14c8\nStep 12/14 : ENV SPARK_HOME /opt/spark\n ---> Using cache\n ---> acb3d08effe3\nStep 13/14 : WORKDIR /opt/spark/work-dir\n ---> Using cache\n ---> d310fac48d35\nStep 14/14 : ENTRYPOINT /opt/entrypoint.sh\n ---> Using cache\n ---> 5a3ff9819ba4\nSuccessfully built 5a3ff9819ba4", 
+        "stdout_lines": [
+            "Sending build context to Docker daemon 256.5 MB", 
+            "", 
+            "Step 1/14 : FROM openjdk:8-alpine", 
+            " ---> 97bc1352afde", 
+            "Step 2/14 : ARG spark_jars=jars", 
+            " ---> Using cache", 
+            " ---> 43a88b8f293b", 
+            "Step 3/14 : ARG img_path=kubernetes/dockerfiles", 
+            " ---> Using cache", 
+            " ---> 71820d750cef", 
+            "Step 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd", 
+            " ---> Using cache", 
+            " ---> e21c21b62082", 
+            "Step 5/14 : COPY ${spark_jars} /opt/spark/jars", 
+            " ---> Using cache", 
+            " ---> 08ade418da2a", 
+            "Step 6/14 : COPY bin /opt/spark/bin", 
+            " ---> Using cache", 
+            " ---> 8d0cecbce67d", 
+            "Step 7/14 : COPY sbin /opt/spark/sbin", 
+            " ---> Using cache", 
+            " ---> e91d02214f18", 
+            "Step 8/14 : COPY conf /opt/spark/conf", 
+            " ---> Using cache", 
+            " ---> 4f50cdad51f5", 
+            "Step 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/", 
+            " ---> Using cache", 
+            " ---> fbcf4eaede38", 
+            "Step 10/14 : COPY examples /opt/spark/examples", 
+            " ---> Using cache", 
+            " ---> 371e5dd8f1af", 
+            "Step 11/14 : COPY data /opt/spark/data", 
+            " ---> Using cache", 
+            " ---> b86957cd14c8", 
+            "Step 12/14 : ENV SPARK_HOME /opt/spark", 
+            " ---> Using cache", 
+            " ---> acb3d08effe3", 
+            "Step 13/14 : WORKDIR /opt/spark/work-dir", 
+            " ---> Using cache", 
+            " ---> d310fac48d35", 
+            "Step 14/14 : ENTRYPOINT /opt/entrypoint.sh", 
+            " ---> Using cache", 
+            " ---> 5a3ff9819ba4", 
+            "Successfully built 5a3ff9819ba4"
+        ]
+    }
+}
+2018-12-05 17:02:32,195 p=27682 u=yungshun |  TASK [Create an nginx deployment] **********************************************
+2018-12-05 17:02:34,832 p=27682 u=yungshun |  fatal: [10.236.1.1]: FAILED! => {"changed": true, "cmd": "kubectl create -f nginx.yml", "delta": "0:00:02.217742", "end": "2018-12-05 17:02:34.781264", "msg": "non-zero return code", "rc": 1, "start": "2018-12-05 17:02:32.563522", "stderr": "Error from server (AlreadyExists): error when creating \"nginx.yml\": deployments.extensions \"nginx-deployment\" already exists", "stderr_lines": ["Error from server (AlreadyExists): error when creating \"nginx.yml\": deployments.extensions \"nginx-deployment\" already exists"], "stdout": "", "stdout_lines": []}
+2018-12-05 17:02:34,834 p=27682 u=yungshun |  	to retry, use: --limit @/home/yungshun/workspace/ansible/ansible-k8s-spark-remote/k8s-spark.retry
+
+2018-12-05 17:02:34,834 p=27682 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 17:02:34,834 p=27682 u=yungshun |  10.236.1.1                 : ok=11   changed=4    unreachable=0    failed=1   
+2018-12-05 17:03:49,399 p=27924 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 17:03:49,411 p=27924 u=yungshun |  TASK [Copy .yml files to k8s master] *******************************************
+2018-12-05 17:03:51,644 p=27924 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/nginx.yml', u'src': u'nginx.yml'})
+2018-12-05 17:03:52,235 p=27924 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master.yml', u'src': u'spark-master.yml'})
+2018-12-05 17:03:52,831 p=27924 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master-service.yml', u'src': u'spark-master-service.yml'})
+2018-12-05 17:03:53,430 p=27924 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-worker.yml', u'src': u'spark-worker.yml'})
+2018-12-05 17:03:53,441 p=27924 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 17:04:17,146 p=27924 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:04:17,151 p=27924 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 17:04:21,526 p=27924 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:04:21,531 p=27924 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 17:04:21,962 p=27924 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:04:21,967 p=27924 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 17:04:22,832 p=27924 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:04:22,838 p=27924 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 17:04:22,922 p=27924 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:04:22,926 p=27924 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 17:04:23,344 p=27924 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:04:23,349 p=27924 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 17:04:23,432 p=27924 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:04:23,437 p=27924 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 17:04:23,885 p=27924 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:04:23,890 p=27924 u=yungshun |  TASK [Build Spark Docker image using docker-image-tool.sh] *********************
+2018-12-05 17:04:26,217 p=27924 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:04:26,223 p=27924 u=yungshun |  TASK [Debug build_spark_image] *************************************************
+2018-12-05 17:04:26,308 p=27924 u=yungshun |  ok: [10.236.1.1] => {
+    "build_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r ccma -t latest build", 
+        "delta": "0:00:01.769261", 
+        "end": "2018-12-05 17:04:26.167085", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:04:24.397824", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "Sending build context to Docker daemon 256.5 MB\r\r\nStep 1/14 : FROM openjdk:8-alpine\n ---> 97bc1352afde\nStep 2/14 : ARG spark_jars=jars\n ---> Using cache\n ---> 43a88b8f293b\nStep 3/14 : ARG img_path=kubernetes/dockerfiles\n ---> Using cache\n ---> 71820d750cef\nStep 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd\n ---> Using cache\n ---> e21c21b62082\nStep 5/14 : COPY ${spark_jars} /opt/spark/jars\n ---> Using cache\n ---> 08ade418da2a\nStep 6/14 : COPY bin /opt/spark/bin\n ---> Using cache\n ---> 8d0cecbce67d\nStep 7/14 : COPY sbin /opt/spark/sbin\n ---> Using cache\n ---> e91d02214f18\nStep 8/14 : COPY conf /opt/spark/conf\n ---> Using cache\n ---> 4f50cdad51f5\nStep 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/\n ---> Using cache\n ---> fbcf4eaede38\nStep 10/14 : COPY examples /opt/spark/examples\n ---> Using cache\n ---> 371e5dd8f1af\nStep 11/14 : COPY data /opt/spark/data\n ---> Using cache\n ---> b86957cd14c8\nStep 12/14 : ENV SPARK_HOME /opt/spark\n ---> Using cache\n ---> acb3d08effe3\nStep 13/14 : WORKDIR /opt/spark/work-dir\n ---> Using cache\n ---> d310fac48d35\nStep 14/14 : ENTRYPOINT /opt/entrypoint.sh\n ---> Using cache\n ---> 5a3ff9819ba4\nSuccessfully built 5a3ff9819ba4", 
+        "stdout_lines": [
+            "Sending build context to Docker daemon 256.5 MB", 
+            "", 
+            "Step 1/14 : FROM openjdk:8-alpine", 
+            " ---> 97bc1352afde", 
+            "Step 2/14 : ARG spark_jars=jars", 
+            " ---> Using cache", 
+            " ---> 43a88b8f293b", 
+            "Step 3/14 : ARG img_path=kubernetes/dockerfiles", 
+            " ---> Using cache", 
+            " ---> 71820d750cef", 
+            "Step 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd", 
+            " ---> Using cache", 
+            " ---> e21c21b62082", 
+            "Step 5/14 : COPY ${spark_jars} /opt/spark/jars", 
+            " ---> Using cache", 
+            " ---> 08ade418da2a", 
+            "Step 6/14 : COPY bin /opt/spark/bin", 
+            " ---> Using cache", 
+            " ---> 8d0cecbce67d", 
+            "Step 7/14 : COPY sbin /opt/spark/sbin", 
+            " ---> Using cache", 
+            " ---> e91d02214f18", 
+            "Step 8/14 : COPY conf /opt/spark/conf", 
+            " ---> Using cache", 
+            " ---> 4f50cdad51f5", 
+            "Step 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/", 
+            " ---> Using cache", 
+            " ---> fbcf4eaede38", 
+            "Step 10/14 : COPY examples /opt/spark/examples", 
+            " ---> Using cache", 
+            " ---> 371e5dd8f1af", 
+            "Step 11/14 : COPY data /opt/spark/data", 
+            " ---> Using cache", 
+            " ---> b86957cd14c8", 
+            "Step 12/14 : ENV SPARK_HOME /opt/spark", 
+            " ---> Using cache", 
+            " ---> acb3d08effe3", 
+            "Step 13/14 : WORKDIR /opt/spark/work-dir", 
+            " ---> Using cache", 
+            " ---> d310fac48d35", 
+            "Step 14/14 : ENTRYPOINT /opt/entrypoint.sh", 
+            " ---> Using cache", 
+            " ---> 5a3ff9819ba4", 
+            "Successfully built 5a3ff9819ba4"
+        ]
+    }
+}
+2018-12-05 17:04:26,314 p=27924 u=yungshun |  TASK [Create an nginx deployment] **********************************************
+2018-12-05 17:04:29,117 p=27924 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:04:29,122 p=27924 u=yungshun |  TASK [Debug create_nginx] ******************************************************
+2018-12-05 17:04:29,206 p=27924 u=yungshun |  ok: [10.236.1.1] => {
+    "create_nginx": {
+        "changed": true, 
+        "cmd": "kubectl create -f nginx.yml", 
+        "delta": "0:00:02.384940", 
+        "end": "2018-12-05 17:04:29.062930", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:04:26.677990", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/nginx-deployment created", 
+        "stdout_lines": [
+            "deployment.extensions/nginx-deployment created"
+        ]
+    }
+}
+2018-12-05 17:04:29,212 p=27924 u=yungshun |  TASK [Create an spark-master deployment] ***************************************
+2018-12-05 17:04:31,812 p=27924 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:04:31,817 p=27924 u=yungshun |  TASK [Debug create_spark_master] ***********************************************
+2018-12-05 17:04:31,899 p=27924 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_master": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-master.yml", 
+        "delta": "0:00:02.182903", 
+        "end": "2018-12-05 17:04:31.761211", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:04:29.578308", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/spark-master created", 
+        "stdout_lines": [
+            "deployment.extensions/spark-master created"
+        ]
+    }
+}
+2018-12-05 17:04:31,905 p=27924 u=yungshun |  TASK [Create an spark-master service] ******************************************
+2018-12-05 17:04:34,521 p=27924 u=yungshun |  fatal: [10.236.1.1]: FAILED! => {"changed": true, "cmd": "kubectl create -f spark-master-service.yml", "delta": "0:00:02.192863", "end": "2018-12-05 17:04:34.466964", "msg": "non-zero return code", "rc": 1, "start": "2018-12-05 17:04:32.274101", "stderr": "Error from server (BadRequest): error when creating \"spark-master-service.yml\": service in version \"v1\" cannot be handled as a Service: no kind \"service\" is registered for version \"v1\" in scheme \"k8s.io/kubernetes/pkg/api/legacyscheme/scheme.go:29\"", "stderr_lines": ["Error from server (BadRequest): error when creating \"spark-master-service.yml\": service in version \"v1\" cannot be handled as a Service: no kind \"service\" is registered for version \"v1\" in scheme \"k8s.io/kubernetes/pkg/api/legacyscheme/scheme.go:29\""], "stdout": "", "stdout_lines": []}
+2018-12-05 17:04:34,524 p=27924 u=yungshun |  	to retry, use: --limit @/home/yungshun/workspace/ansible/ansible-k8s-spark-remote/k8s-spark.retry
+
+2018-12-05 17:04:34,524 p=27924 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 17:04:34,524 p=27924 u=yungshun |  10.236.1.1                 : ok=15   changed=5    unreachable=0    failed=1   
+2018-12-05 17:06:16,164 p=28216 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 17:06:16,177 p=28216 u=yungshun |  TASK [Copy .yml files to k8s master] *******************************************
+2018-12-05 17:06:18,664 p=28216 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/nginx.yml', u'src': u'nginx.yml'})
+2018-12-05 17:06:19,252 p=28216 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master.yml', u'src': u'spark-master.yml'})
+2018-12-05 17:06:20,053 p=28216 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master-service.yml', u'src': u'spark-master-service.yml'})
+2018-12-05 17:06:20,668 p=28216 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-worker.yml', u'src': u'spark-worker.yml'})
+2018-12-05 17:06:20,675 p=28216 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 17:06:42,195 p=28216 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:06:42,200 p=28216 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 17:06:46,519 p=28216 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:06:46,524 p=28216 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 17:06:46,960 p=28216 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:06:46,964 p=28216 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 17:06:47,546 p=28216 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:06:47,551 p=28216 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 17:06:47,640 p=28216 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:06:47,652 p=28216 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 17:06:48,057 p=28216 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:06:48,063 p=28216 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 17:06:48,146 p=28216 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:06:48,151 p=28216 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 17:06:48,623 p=28216 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:06:48,628 p=28216 u=yungshun |  TASK [Build Spark Docker image using docker-image-tool.sh] *********************
+2018-12-05 17:06:50,990 p=28216 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:06:50,995 p=28216 u=yungshun |  TASK [Debug build_spark_image] *************************************************
+2018-12-05 17:06:51,081 p=28216 u=yungshun |  ok: [10.236.1.1] => {
+    "build_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r ccma -t latest build", 
+        "delta": "0:00:01.798232", 
+        "end": "2018-12-05 17:06:50.934813", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:06:49.136581", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "Sending build context to Docker daemon 256.5 MB\r\r\nStep 1/14 : FROM openjdk:8-alpine\n ---> 97bc1352afde\nStep 2/14 : ARG spark_jars=jars\n ---> Using cache\n ---> 43a88b8f293b\nStep 3/14 : ARG img_path=kubernetes/dockerfiles\n ---> Using cache\n ---> 71820d750cef\nStep 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd\n ---> Using cache\n ---> e21c21b62082\nStep 5/14 : COPY ${spark_jars} /opt/spark/jars\n ---> Using cache\n ---> 08ade418da2a\nStep 6/14 : COPY bin /opt/spark/bin\n ---> Using cache\n ---> 8d0cecbce67d\nStep 7/14 : COPY sbin /opt/spark/sbin\n ---> Using cache\n ---> e91d02214f18\nStep 8/14 : COPY conf /opt/spark/conf\n ---> Using cache\n ---> 4f50cdad51f5\nStep 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/\n ---> Using cache\n ---> fbcf4eaede38\nStep 10/14 : COPY examples /opt/spark/examples\n ---> Using cache\n ---> 371e5dd8f1af\nStep 11/14 : COPY data /opt/spark/data\n ---> Using cache\n ---> b86957cd14c8\nStep 12/14 : ENV SPARK_HOME /opt/spark\n ---> Using cache\n ---> acb3d08effe3\nStep 13/14 : WORKDIR /opt/spark/work-dir\n ---> Using cache\n ---> d310fac48d35\nStep 14/14 : ENTRYPOINT /opt/entrypoint.sh\n ---> Using cache\n ---> 5a3ff9819ba4\nSuccessfully built 5a3ff9819ba4", 
+        "stdout_lines": [
+            "Sending build context to Docker daemon 256.5 MB", 
+            "", 
+            "Step 1/14 : FROM openjdk:8-alpine", 
+            " ---> 97bc1352afde", 
+            "Step 2/14 : ARG spark_jars=jars", 
+            " ---> Using cache", 
+            " ---> 43a88b8f293b", 
+            "Step 3/14 : ARG img_path=kubernetes/dockerfiles", 
+            " ---> Using cache", 
+            " ---> 71820d750cef", 
+            "Step 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd", 
+            " ---> Using cache", 
+            " ---> e21c21b62082", 
+            "Step 5/14 : COPY ${spark_jars} /opt/spark/jars", 
+            " ---> Using cache", 
+            " ---> 08ade418da2a", 
+            "Step 6/14 : COPY bin /opt/spark/bin", 
+            " ---> Using cache", 
+            " ---> 8d0cecbce67d", 
+            "Step 7/14 : COPY sbin /opt/spark/sbin", 
+            " ---> Using cache", 
+            " ---> e91d02214f18", 
+            "Step 8/14 : COPY conf /opt/spark/conf", 
+            " ---> Using cache", 
+            " ---> 4f50cdad51f5", 
+            "Step 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/", 
+            " ---> Using cache", 
+            " ---> fbcf4eaede38", 
+            "Step 10/14 : COPY examples /opt/spark/examples", 
+            " ---> Using cache", 
+            " ---> 371e5dd8f1af", 
+            "Step 11/14 : COPY data /opt/spark/data", 
+            " ---> Using cache", 
+            " ---> b86957cd14c8", 
+            "Step 12/14 : ENV SPARK_HOME /opt/spark", 
+            " ---> Using cache", 
+            " ---> acb3d08effe3", 
+            "Step 13/14 : WORKDIR /opt/spark/work-dir", 
+            " ---> Using cache", 
+            " ---> d310fac48d35", 
+            "Step 14/14 : ENTRYPOINT /opt/entrypoint.sh", 
+            " ---> Using cache", 
+            " ---> 5a3ff9819ba4", 
+            "Successfully built 5a3ff9819ba4"
+        ]
+    }
+}
+2018-12-05 17:06:51,087 p=28216 u=yungshun |  TASK [Create an nginx deployment] **********************************************
+2018-12-05 17:06:53,673 p=28216 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:06:53,679 p=28216 u=yungshun |  TASK [Debug create_nginx] ******************************************************
+2018-12-05 17:06:53,763 p=28216 u=yungshun |  ok: [10.236.1.1] => {
+    "create_nginx": {
+        "changed": true, 
+        "cmd": "kubectl create -f nginx.yml", 
+        "delta": "0:00:02.156436", 
+        "end": "2018-12-05 17:06:53.609125", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:06:51.452689", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/nginx-deployment created", 
+        "stdout_lines": [
+            "deployment.extensions/nginx-deployment created"
+        ]
+    }
+}
+2018-12-05 17:06:53,769 p=28216 u=yungshun |  TASK [Create an spark-master deployment] ***************************************
+2018-12-05 17:06:57,213 p=28216 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:06:57,218 p=28216 u=yungshun |  TASK [Debug create_spark_master] ***********************************************
+2018-12-05 17:06:57,309 p=28216 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_master": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-master.yml", 
+        "delta": "0:00:03.031916", 
+        "end": "2018-12-05 17:06:57.160068", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:06:54.128152", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/spark-master created", 
+        "stdout_lines": [
+            "deployment.extensions/spark-master created"
+        ]
+    }
+}
+2018-12-05 17:06:57,316 p=28216 u=yungshun |  TASK [Create an spark-master service] ******************************************
+2018-12-05 17:07:00,102 p=28216 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:07:00,118 p=28216 u=yungshun |  TASK [Debug create_spark_master_svc] *******************************************
+2018-12-05 17:07:00,203 p=28216 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_master_svc": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-master-service.yml", 
+        "delta": "0:00:02.347419", 
+        "end": "2018-12-05 17:07:00.048694", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:06:57.701275", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/spark-master created", 
+        "stdout_lines": [
+            "service/spark-master created"
+        ]
+    }
+}
+2018-12-05 17:07:00,208 p=28216 u=yungshun |  TASK [Create an spark-worker deployment] ***************************************
+2018-12-05 17:07:02,825 p=28216 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:07:02,830 p=28216 u=yungshun |  TASK [Debug create_spark_worker] ***********************************************
+2018-12-05 17:07:02,912 p=28216 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_worker": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-worker.yml", 
+        "delta": "0:00:02.196633", 
+        "end": "2018-12-05 17:07:02.770373", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:07:00.573740", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/spark-worker created", 
+        "stdout_lines": [
+            "deployment.extensions/spark-worker created"
+        ]
+    }
+}
+2018-12-05 17:07:02,915 p=28216 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 17:07:02,915 p=28216 u=yungshun |  10.236.1.1                 : ok=19   changed=8    unreachable=0    failed=0   
+2018-12-05 17:32:05,977 p=28643 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 17:32:05,989 p=28643 u=yungshun |  TASK [Copy .yml files to k8s master] *******************************************
+2018-12-05 17:32:08,807 p=28643 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/nginx.yml', u'src': u'nginx.yml'})
+2018-12-05 17:32:09,944 p=28643 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master.yml', u'src': u'spark-master.yml'})
+2018-12-05 17:32:10,537 p=28643 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master-service.yml', u'src': u'spark-master-service.yml'})
+2018-12-05 17:32:11,217 p=28643 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-worker.yml', u'src': u'spark-worker.yml'})
+2018-12-05 17:32:11,224 p=28643 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 17:32:32,587 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:32,593 p=28643 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 17:32:37,043 p=28643 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:32:37,047 p=28643 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 17:32:37,487 p=28643 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:32:37,492 p=28643 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 17:32:38,061 p=28643 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:32:38,067 p=28643 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 17:32:38,152 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:32:38,157 p=28643 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 17:32:38,577 p=28643 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:32:38,582 p=28643 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 17:32:38,675 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:32:38,683 p=28643 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 17:32:39,152 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:39,156 p=28643 u=yungshun |  TASK [Build Spark Docker image using docker-image-tool.sh] *********************
+2018-12-05 17:32:41,483 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:41,487 p=28643 u=yungshun |  TASK [Debug build_spark_image] *************************************************
+2018-12-05 17:32:41,575 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "build_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r yungshun317 -t latest build", 
+        "delta": "0:00:01.760858", 
+        "end": "2018-12-05 17:32:41.430298", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:32:39.669440", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "Sending build context to Docker daemon 256.5 MB\r\r\nStep 1/14 : FROM openjdk:8-alpine\n ---> 97bc1352afde\nStep 2/14 : ARG spark_jars=jars\n ---> Using cache\n ---> 43a88b8f293b\nStep 3/14 : ARG img_path=kubernetes/dockerfiles\n ---> Using cache\n ---> 71820d750cef\nStep 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd\n ---> Using cache\n ---> e21c21b62082\nStep 5/14 : COPY ${spark_jars} /opt/spark/jars\n ---> Using cache\n ---> 08ade418da2a\nStep 6/14 : COPY bin /opt/spark/bin\n ---> Using cache\n ---> 8d0cecbce67d\nStep 7/14 : COPY sbin /opt/spark/sbin\n ---> Using cache\n ---> e91d02214f18\nStep 8/14 : COPY conf /opt/spark/conf\n ---> Using cache\n ---> 4f50cdad51f5\nStep 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/\n ---> Using cache\n ---> fbcf4eaede38\nStep 10/14 : COPY examples /opt/spark/examples\n ---> Using cache\n ---> 371e5dd8f1af\nStep 11/14 : COPY data /opt/spark/data\n ---> Using cache\n ---> b86957cd14c8\nStep 12/14 : ENV SPARK_HOME /opt/spark\n ---> Using cache\n ---> acb3d08effe3\nStep 13/14 : WORKDIR /opt/spark/work-dir\n ---> Using cache\n ---> d310fac48d35\nStep 14/14 : ENTRYPOINT /opt/entrypoint.sh\n ---> Using cache\n ---> 5a3ff9819ba4\nSuccessfully built 5a3ff9819ba4", 
+        "stdout_lines": [
+            "Sending build context to Docker daemon 256.5 MB", 
+            "", 
+            "Step 1/14 : FROM openjdk:8-alpine", 
+            " ---> 97bc1352afde", 
+            "Step 2/14 : ARG spark_jars=jars", 
+            " ---> Using cache", 
+            " ---> 43a88b8f293b", 
+            "Step 3/14 : ARG img_path=kubernetes/dockerfiles", 
+            " ---> Using cache", 
+            " ---> 71820d750cef", 
+            "Step 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd", 
+            " ---> Using cache", 
+            " ---> e21c21b62082", 
+            "Step 5/14 : COPY ${spark_jars} /opt/spark/jars", 
+            " ---> Using cache", 
+            " ---> 08ade418da2a", 
+            "Step 6/14 : COPY bin /opt/spark/bin", 
+            " ---> Using cache", 
+            " ---> 8d0cecbce67d", 
+            "Step 7/14 : COPY sbin /opt/spark/sbin", 
+            " ---> Using cache", 
+            " ---> e91d02214f18", 
+            "Step 8/14 : COPY conf /opt/spark/conf", 
+            " ---> Using cache", 
+            " ---> 4f50cdad51f5", 
+            "Step 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/", 
+            " ---> Using cache", 
+            " ---> fbcf4eaede38", 
+            "Step 10/14 : COPY examples /opt/spark/examples", 
+            " ---> Using cache", 
+            " ---> 371e5dd8f1af", 
+            "Step 11/14 : COPY data /opt/spark/data", 
+            " ---> Using cache", 
+            " ---> b86957cd14c8", 
+            "Step 12/14 : ENV SPARK_HOME /opt/spark", 
+            " ---> Using cache", 
+            " ---> acb3d08effe3", 
+            "Step 13/14 : WORKDIR /opt/spark/work-dir", 
+            " ---> Using cache", 
+            " ---> d310fac48d35", 
+            "Step 14/14 : ENTRYPOINT /opt/entrypoint.sh", 
+            " ---> Using cache", 
+            " ---> 5a3ff9819ba4", 
+            "Successfully built 5a3ff9819ba4"
+        ]
+    }
+}
+2018-12-05 17:32:41,581 p=28643 u=yungshun |  TASK [Log into DockerHub] ******************************************************
+2018-12-05 17:32:42,548 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:42,552 p=28643 u=yungshun |  TASK [Push Spark Docker image using docker-image-tool.sh] **********************
+2018-12-05 17:32:49,954 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:49,960 p=28643 u=yungshun |  TASK [Debug push_spark_image] **************************************************
+2018-12-05 17:32:50,045 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "push_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r yungshun317 -t latest push", 
+        "delta": "0:00:06.979159", 
+        "end": "2018-12-05 17:32:49.902095", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:32:42.922936", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "The push refers to a repository [docker.io/yungshun317/spark]\n0017145f5960: Preparing\n55cc5be1acc1: Preparing\n4d6f27f7b604: Preparing\n41492c9f788d: Preparing\nf3ad8043c52a: Preparing\n7a2253586749: Preparing\n7ce64cc46444: Preparing\n320bbd3a0bd1: Preparing\ned6f0bd39121: Preparing\n0c3170905795: Preparing\ndf64d3292fd6: Preparing\n7a2253586749: Waiting\n7ce64cc46444: Waiting\n320bbd3a0bd1: Waiting\ned6f0bd39121: Waiting\n0c3170905795: Waiting\ndf64d3292fd6: Waiting\n0017145f5960: Layer already exists\n55cc5be1acc1: Layer already exists\n4d6f27f7b604: Layer already exists\n41492c9f788d: Layer already exists\nf3ad8043c52a: Layer already exists\n7a2253586749: Layer already exists\ned6f0bd39121: Layer already exists\n320bbd3a0bd1: Layer already exists\n0c3170905795: Layer already exists\n7ce64cc46444: Layer already exists\ndf64d3292fd6: Layer already exists\nlatest: digest: sha256:5e7c40f503b0383b0324dbab759f05966294356decaeecf55909e3e50256a6e9 size: 2624", 
+        "stdout_lines": [
+            "The push refers to a repository [docker.io/yungshun317/spark]", 
+            "0017145f5960: Preparing", 
+            "55cc5be1acc1: Preparing", 
+            "4d6f27f7b604: Preparing", 
+            "41492c9f788d: Preparing", 
+            "f3ad8043c52a: Preparing", 
+            "7a2253586749: Preparing", 
+            "7ce64cc46444: Preparing", 
+            "320bbd3a0bd1: Preparing", 
+            "ed6f0bd39121: Preparing", 
+            "0c3170905795: Preparing", 
+            "df64d3292fd6: Preparing", 
+            "7a2253586749: Waiting", 
+            "7ce64cc46444: Waiting", 
+            "320bbd3a0bd1: Waiting", 
+            "ed6f0bd39121: Waiting", 
+            "0c3170905795: Waiting", 
+            "df64d3292fd6: Waiting", 
+            "0017145f5960: Layer already exists", 
+            "55cc5be1acc1: Layer already exists", 
+            "4d6f27f7b604: Layer already exists", 
+            "41492c9f788d: Layer already exists", 
+            "f3ad8043c52a: Layer already exists", 
+            "7a2253586749: Layer already exists", 
+            "ed6f0bd39121: Layer already exists", 
+            "320bbd3a0bd1: Layer already exists", 
+            "0c3170905795: Layer already exists", 
+            "7ce64cc46444: Layer already exists", 
+            "df64d3292fd6: Layer already exists", 
+            "latest: digest: sha256:5e7c40f503b0383b0324dbab759f05966294356decaeecf55909e3e50256a6e9 size: 2624"
+        ]
+    }
+}
+2018-12-05 17:32:50,051 p=28643 u=yungshun |  TASK [Create an nginx deployment] **********************************************
+2018-12-05 17:32:52,549 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:52,555 p=28643 u=yungshun |  TASK [Debug create_nginx] ******************************************************
+2018-12-05 17:32:52,640 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "create_nginx": {
+        "changed": true, 
+        "cmd": "kubectl create -f nginx.yml", 
+        "delta": "0:00:02.080756", 
+        "end": "2018-12-05 17:32:52.497888", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:32:50.417132", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/nginx-deployment created", 
+        "stdout_lines": [
+            "deployment.extensions/nginx-deployment created"
+        ]
+    }
+}
+2018-12-05 17:32:52,647 p=28643 u=yungshun |  TASK [Create a spark-master deployment] ****************************************
+2018-12-05 17:32:55,221 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:55,226 p=28643 u=yungshun |  TASK [Debug create_spark_master] ***********************************************
+2018-12-05 17:32:55,311 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_master": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-master.yml", 
+        "delta": "0:00:02.153384", 
+        "end": "2018-12-05 17:32:55.171345", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:32:53.017961", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/spark-master created", 
+        "stdout_lines": [
+            "deployment.extensions/spark-master created"
+        ]
+    }
+}
+2018-12-05 17:32:55,316 p=28643 u=yungshun |  TASK [Create a spark-master service] *******************************************
+2018-12-05 17:32:57,964 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:32:57,970 p=28643 u=yungshun |  TASK [Debug create_spark_master_svc] *******************************************
+2018-12-05 17:32:58,054 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_master_svc": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-master-service.yml", 
+        "delta": "0:00:02.223730", 
+        "end": "2018-12-05 17:32:57.916414", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:32:55.692684", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/spark-master created", 
+        "stdout_lines": [
+            "service/spark-master created"
+        ]
+    }
+}
+2018-12-05 17:32:58,059 p=28643 u=yungshun |  TASK [Create a spark-worker deployment] ****************************************
+2018-12-05 17:33:00,637 p=28643 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:33:00,642 p=28643 u=yungshun |  TASK [Debug create_spark_worker] ***********************************************
+2018-12-05 17:33:00,727 p=28643 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_worker": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-worker.yml", 
+        "delta": "0:00:02.151255", 
+        "end": "2018-12-05 17:33:00.587656", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:32:58.436401", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/spark-worker created", 
+        "stdout_lines": [
+            "deployment.extensions/spark-worker created"
+        ]
+    }
+}
+2018-12-05 17:33:00,730 p=28643 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 17:33:00,730 p=28643 u=yungshun |  10.236.1.1                 : ok=22   changed=10   unreachable=0    failed=0   
+2018-12-05 17:43:32,760 p=29051 u=yungshun |  PLAY [spark] *******************************************************************
+2018-12-05 17:43:32,772 p=29051 u=yungshun |  TASK [Copy .yml files to k8s master] *******************************************
+2018-12-05 17:43:35,006 p=29051 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/nginx.yml', u'src': u'nginx.yml'})
+2018-12-05 17:43:35,791 p=29051 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master.yml', u'src': u'spark-master.yml'})
+2018-12-05 17:43:36,396 p=29051 u=yungshun |  ok: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-master-service.yml', u'src': u'spark-master-service.yml'})
+2018-12-05 17:43:37,388 p=29051 u=yungshun |  changed: [10.236.1.1] => (item={u'dest': u'/home/ccma/spark-worker.yml', u'src': u'spark-worker.yml'})
+2018-12-05 17:43:37,394 p=29051 u=yungshun |  TASK [Download Spark binary file] **********************************************
+2018-12-05 17:43:59,571 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:43:59,576 p=29051 u=yungshun |  TASK [Extract Spark file] ******************************************************
+2018-12-05 17:44:04,094 p=29051 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:44:04,098 p=29051 u=yungshun |  TASK [Add Spark symlink] *******************************************************
+2018-12-05 17:44:04,542 p=29051 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:44:04,547 p=29051 u=yungshun |  TASK [Set Spark Home] **********************************************************
+2018-12-05 17:44:05,113 p=29051 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:44:05,118 p=29051 u=yungshun |  TASK [Debug spark_home] ********************************************************
+2018-12-05 17:44:05,201 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_home": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/etc/environment (content)", 
+                "before": "", 
+                "before_header": "/etc/environment (content)"
+            }, 
+            {
+                "after_header": "/etc/environment (file attributes)", 
+                "before_header": "/etc/environment (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:44:05,207 p=29051 u=yungshun |  TASK [Set Spark Path] **********************************************************
+2018-12-05 17:44:05,620 p=29051 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:44:05,626 p=29051 u=yungshun |  TASK [Debug spark_path] ********************************************************
+2018-12-05 17:44:05,710 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "spark_path": {
+        "backup": "", 
+        "changed": false, 
+        "diff": [
+            {
+                "after": "", 
+                "after_header": "/home/ccma/.bashrc (content)", 
+                "before": "", 
+                "before_header": "/home/ccma/.bashrc (content)"
+            }, 
+            {
+                "after_header": "/home/ccma/.bashrc (file attributes)", 
+                "before_header": "/home/ccma/.bashrc (file attributes)"
+            }
+        ], 
+        "failed": false, 
+        "msg": ""
+    }
+}
+2018-12-05 17:44:05,716 p=29051 u=yungshun |  TASK [Clean downloaded package] ************************************************
+2018-12-05 17:44:06,170 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:44:06,176 p=29051 u=yungshun |  TASK [Build Spark Docker image using docker-image-tool.sh] *********************
+2018-12-05 17:44:08,481 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:44:08,487 p=29051 u=yungshun |  TASK [Debug build_spark_image] *************************************************
+2018-12-05 17:44:08,573 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "build_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r yungshun317 -t latest build", 
+        "delta": "0:00:01.758622", 
+        "end": "2018-12-05 17:44:08.436187", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:44:06.677565", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "Sending build context to Docker daemon 256.5 MB\r\r\nStep 1/14 : FROM openjdk:8-alpine\n ---> 97bc1352afde\nStep 2/14 : ARG spark_jars=jars\n ---> Using cache\n ---> 43a88b8f293b\nStep 3/14 : ARG img_path=kubernetes/dockerfiles\n ---> Using cache\n ---> 71820d750cef\nStep 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd\n ---> Using cache\n ---> e21c21b62082\nStep 5/14 : COPY ${spark_jars} /opt/spark/jars\n ---> Using cache\n ---> 08ade418da2a\nStep 6/14 : COPY bin /opt/spark/bin\n ---> Using cache\n ---> 8d0cecbce67d\nStep 7/14 : COPY sbin /opt/spark/sbin\n ---> Using cache\n ---> e91d02214f18\nStep 8/14 : COPY conf /opt/spark/conf\n ---> Using cache\n ---> 4f50cdad51f5\nStep 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/\n ---> Using cache\n ---> fbcf4eaede38\nStep 10/14 : COPY examples /opt/spark/examples\n ---> Using cache\n ---> 371e5dd8f1af\nStep 11/14 : COPY data /opt/spark/data\n ---> Using cache\n ---> b86957cd14c8\nStep 12/14 : ENV SPARK_HOME /opt/spark\n ---> Using cache\n ---> acb3d08effe3\nStep 13/14 : WORKDIR /opt/spark/work-dir\n ---> Using cache\n ---> d310fac48d35\nStep 14/14 : ENTRYPOINT /opt/entrypoint.sh\n ---> Using cache\n ---> 5a3ff9819ba4\nSuccessfully built 5a3ff9819ba4", 
+        "stdout_lines": [
+            "Sending build context to Docker daemon 256.5 MB", 
+            "", 
+            "Step 1/14 : FROM openjdk:8-alpine", 
+            " ---> 97bc1352afde", 
+            "Step 2/14 : ARG spark_jars=jars", 
+            " ---> Using cache", 
+            " ---> 43a88b8f293b", 
+            "Step 3/14 : ARG img_path=kubernetes/dockerfiles", 
+            " ---> Using cache", 
+            " ---> 71820d750cef", 
+            "Step 4/14 : RUN set -ex &&     apk upgrade --no-cache &&     apk add --no-cache bash tini libc6-compat &&     mkdir -p /opt/spark &&     mkdir -p /opt/spark/work-dir     touch /opt/spark/RELEASE &&     rm /bin/sh &&     ln -sv /bin/bash /bin/sh &&     chgrp root /etc/passwd && chmod ug+rw /etc/passwd", 
+            " ---> Using cache", 
+            " ---> e21c21b62082", 
+            "Step 5/14 : COPY ${spark_jars} /opt/spark/jars", 
+            " ---> Using cache", 
+            " ---> 08ade418da2a", 
+            "Step 6/14 : COPY bin /opt/spark/bin", 
+            " ---> Using cache", 
+            " ---> 8d0cecbce67d", 
+            "Step 7/14 : COPY sbin /opt/spark/sbin", 
+            " ---> Using cache", 
+            " ---> e91d02214f18", 
+            "Step 8/14 : COPY conf /opt/spark/conf", 
+            " ---> Using cache", 
+            " ---> 4f50cdad51f5", 
+            "Step 9/14 : COPY ${img_path}/spark/entrypoint.sh /opt/", 
+            " ---> Using cache", 
+            " ---> fbcf4eaede38", 
+            "Step 10/14 : COPY examples /opt/spark/examples", 
+            " ---> Using cache", 
+            " ---> 371e5dd8f1af", 
+            "Step 11/14 : COPY data /opt/spark/data", 
+            " ---> Using cache", 
+            " ---> b86957cd14c8", 
+            "Step 12/14 : ENV SPARK_HOME /opt/spark", 
+            " ---> Using cache", 
+            " ---> acb3d08effe3", 
+            "Step 13/14 : WORKDIR /opt/spark/work-dir", 
+            " ---> Using cache", 
+            " ---> d310fac48d35", 
+            "Step 14/14 : ENTRYPOINT /opt/entrypoint.sh", 
+            " ---> Using cache", 
+            " ---> 5a3ff9819ba4", 
+            "Successfully built 5a3ff9819ba4"
+        ]
+    }
+}
+2018-12-05 17:44:08,578 p=29051 u=yungshun |  TASK [Log into DockerHub] ******************************************************
+2018-12-05 17:44:09,226 p=29051 u=yungshun |  ok: [10.236.1.1]
+2018-12-05 17:44:09,232 p=29051 u=yungshun |  TASK [Push Spark Docker image using docker-image-tool.sh] **********************
+2018-12-05 17:44:16,569 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:44:16,574 p=29051 u=yungshun |  TASK [Debug push_spark_image] **************************************************
+2018-12-05 17:44:16,658 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "push_spark_image": {
+        "changed": true, 
+        "cmd": "./bin/docker-image-tool.sh -r yungshun317 -t latest push", 
+        "delta": "0:00:06.915042", 
+        "end": "2018-12-05 17:44:16.521188", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:44:09.606146", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "The push refers to a repository [docker.io/yungshun317/spark]\n0017145f5960: Preparing\n55cc5be1acc1: Preparing\n4d6f27f7b604: Preparing\n41492c9f788d: Preparing\nf3ad8043c52a: Preparing\n7a2253586749: Preparing\n7ce64cc46444: Preparing\n320bbd3a0bd1: Preparing\ned6f0bd39121: Preparing\n0c3170905795: Preparing\ndf64d3292fd6: Preparing\ned6f0bd39121: Waiting\n0c3170905795: Waiting\n7ce64cc46444: Waiting\n320bbd3a0bd1: Waiting\ndf64d3292fd6: Waiting\n0017145f5960: Layer already exists\n55cc5be1acc1: Layer already exists\n41492c9f788d: Layer already exists\nf3ad8043c52a: Layer already exists\n4d6f27f7b604: Layer already exists\ned6f0bd39121: Layer already exists\n7ce64cc46444: Layer already exists\n7a2253586749: Layer already exists\n320bbd3a0bd1: Layer already exists\n0c3170905795: Layer already exists\ndf64d3292fd6: Layer already exists\nlatest: digest: sha256:5e7c40f503b0383b0324dbab759f05966294356decaeecf55909e3e50256a6e9 size: 2624", 
+        "stdout_lines": [
+            "The push refers to a repository [docker.io/yungshun317/spark]", 
+            "0017145f5960: Preparing", 
+            "55cc5be1acc1: Preparing", 
+            "4d6f27f7b604: Preparing", 
+            "41492c9f788d: Preparing", 
+            "f3ad8043c52a: Preparing", 
+            "7a2253586749: Preparing", 
+            "7ce64cc46444: Preparing", 
+            "320bbd3a0bd1: Preparing", 
+            "ed6f0bd39121: Preparing", 
+            "0c3170905795: Preparing", 
+            "df64d3292fd6: Preparing", 
+            "ed6f0bd39121: Waiting", 
+            "0c3170905795: Waiting", 
+            "7ce64cc46444: Waiting", 
+            "320bbd3a0bd1: Waiting", 
+            "df64d3292fd6: Waiting", 
+            "0017145f5960: Layer already exists", 
+            "55cc5be1acc1: Layer already exists", 
+            "41492c9f788d: Layer already exists", 
+            "f3ad8043c52a: Layer already exists", 
+            "4d6f27f7b604: Layer already exists", 
+            "ed6f0bd39121: Layer already exists", 
+            "7ce64cc46444: Layer already exists", 
+            "7a2253586749: Layer already exists", 
+            "320bbd3a0bd1: Layer already exists", 
+            "0c3170905795: Layer already exists", 
+            "df64d3292fd6: Layer already exists", 
+            "latest: digest: sha256:5e7c40f503b0383b0324dbab759f05966294356decaeecf55909e3e50256a6e9 size: 2624"
+        ]
+    }
+}
+2018-12-05 17:44:16,664 p=29051 u=yungshun |  TASK [Create an nginx deployment] **********************************************
+2018-12-05 17:44:19,281 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:44:19,285 p=29051 u=yungshun |  TASK [Debug create_nginx] ******************************************************
+2018-12-05 17:44:19,367 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "create_nginx": {
+        "changed": true, 
+        "cmd": "kubectl create -f nginx.yml", 
+        "delta": "0:00:02.196479", 
+        "end": "2018-12-05 17:44:19.236106", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:44:17.039627", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/nginx-deployment created", 
+        "stdout_lines": [
+            "deployment.extensions/nginx-deployment created"
+        ]
+    }
+}
+2018-12-05 17:44:19,373 p=29051 u=yungshun |  TASK [Create a spark-master deployment] ****************************************
+2018-12-05 17:44:22,033 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:44:22,040 p=29051 u=yungshun |  TASK [Debug create_spark_master] ***********************************************
+2018-12-05 17:44:22,123 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_master": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-master.yml", 
+        "delta": "0:00:02.238718", 
+        "end": "2018-12-05 17:44:21.985952", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:44:19.747234", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/spark-master created", 
+        "stdout_lines": [
+            "deployment.extensions/spark-master created"
+        ]
+    }
+}
+2018-12-05 17:44:22,129 p=29051 u=yungshun |  TASK [Create a spark-master service] *******************************************
+2018-12-05 17:44:24,815 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:44:24,821 p=29051 u=yungshun |  TASK [Debug create_spark_master_svc] *******************************************
+2018-12-05 17:44:24,905 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_master_svc": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-master-service.yml", 
+        "delta": "0:00:02.266494", 
+        "end": "2018-12-05 17:44:24.769487", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:44:22.502993", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "service/spark-master created", 
+        "stdout_lines": [
+            "service/spark-master created"
+        ]
+    }
+}
+2018-12-05 17:44:24,910 p=29051 u=yungshun |  TASK [Create a spark-worker deployment] ****************************************
+2018-12-05 17:44:27,568 p=29051 u=yungshun |  changed: [10.236.1.1]
+2018-12-05 17:44:27,573 p=29051 u=yungshun |  TASK [Debug create_spark_worker] ***********************************************
+2018-12-05 17:44:27,663 p=29051 u=yungshun |  ok: [10.236.1.1] => {
+    "create_spark_worker": {
+        "changed": true, 
+        "cmd": "kubectl create -f spark-worker.yml", 
+        "delta": "0:00:02.214222", 
+        "end": "2018-12-05 17:44:27.523259", 
+        "failed": false, 
+        "rc": 0, 
+        "start": "2018-12-05 17:44:25.309037", 
+        "stderr": "", 
+        "stderr_lines": [], 
+        "stdout": "deployment.extensions/spark-worker created", 
+        "stdout_lines": [
+            "deployment.extensions/spark-worker created"
+        ]
+    }
+}
+2018-12-05 17:44:27,665 p=29051 u=yungshun |  PLAY RECAP *********************************************************************
+2018-12-05 17:44:27,665 p=29051 u=yungshun |  10.236.1.1                 : ok=22   changed=9    unreachable=0    failed=0   
