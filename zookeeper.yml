@@ -1,13 +1,19 @@
 ---
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 metadata:
   name: zookeeper-deployment-1
 spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: zookeeper-1
+      version: v01
   template:
     metadata:
       labels:
         app: zookeeper-1
+        version: v01
     spec:
       containers:
         - name: zoo1
