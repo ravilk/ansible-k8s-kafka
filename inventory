@@ -1,15 +1,19 @@
 [master]
-10.236.1.1
+10.244.0.1
 
 [minion]
-10.236.1.2
-10.236.1.3
+10.244.1.1
 
-[ccma:children]
+[vagrant:children]
 master
 minion
 
-[ccma:vars]
+[vagrant:vars]
 ansible_connection = ssh
-ansible_user = ccma
-ansible_ssh_pass = ccma
+ansible_user = vagrant
+ansible_ssh_pass = vagrant
+host_key_checking = False
+
+
+[servers:vars]
+ansible_python_interpreter=/usr/bin/python3

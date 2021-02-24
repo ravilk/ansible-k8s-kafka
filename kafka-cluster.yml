@@ -1,13 +1,19 @@
 ---
 kind: Deployment
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 metadata:
   name: kafka-broker1
 spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: kafka
+      varsion: v01
   template: 
     metadata: 
       labels:
         app: kafka
+        version: v01
         id: "1"
     spec:
       containers:
